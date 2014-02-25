@@ -89,16 +89,16 @@ writable = yes" >> /etc/samba/smb.conf
 
 
 cd /etc/apache2/sites-available/
-sudo touch signup1
+sudo touch trivial_name
 sudo echo "<VirtualHost *:80>
         ServerAdmin admin@localhost.com
-        Servername http://signup1
-        DocumentRoot /var/www/signup1/app/webroot
+        Servername http://trivial_name
+        DocumentRoot /var/www/
         <Directory />
                 Options FollowSymLinks
                 AllowOverride All
         </Directory>
-        <Directory /var/www/signup1/app/webroot>
+        <Directory /var/www/>
                 Options Indexes FollowSymLinks MultiViews
                 AllowOverride All
                 DirectoryIndex index.php index.html
@@ -109,9 +109,9 @@ sudo echo "<VirtualHost *:80>
         # alert, emerg.
         LogLevel warn
 
-        ErrorLog /var/log/apache2/signup1-error.log
-        CustomLog /var/log/apache2/signup1-access.log combined
-</VirtualHost>" >> signup1
+        ErrorLog /var/log/apache2/trivial_name.log
+        CustomLog /var/log/apache2/trivial_name.log combined
+</VirtualHost>" >> trivial_name
 
 
 
