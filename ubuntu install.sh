@@ -86,8 +86,6 @@ writable = yes" >> /etc/samba/smb.conf
 
 
 
-echo "10.151.34.60 gh.riotgames.com" >> /etc/hosts
-
 
 
 cd /etc/apache2/sites-available/
